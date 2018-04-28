@@ -1,0 +1,3 @@
+[submodule "lib/misulib"]
+	path = lib/misulib
+	url = https://github.com/misuco/misulib.git

@@ -9,7 +9,7 @@ Window {
     property int fontSize1: portrait ? height / 25 : width / 20
     property int fontSize3: portrait ? height / 48 : width / 48
 
-    property int buttonSize: portrait ? width/6 : width/12
+    property int buttonSize: width/12
 
     property int buttonRadius: buttonSize/5
     property int borderWidth: 1+buttonSize/50
@@ -27,6 +27,25 @@ Window {
 
     RootNoteSetter {
         id: rootNoteSetterRow
-        anchors.fill: parent
+        model: app.rootNoteSetter
+        pitchColors: app.pitchColors
+        anchors {
+            left: parent.left
+            right: parent.right
+            top: parent.top
+        }
+        height: parent.height / 2
+    }
+
+
+    ScaleSelect {
+        id: scaleSelect
+        model: app.scaleSelect
+        anchors {
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+        }
+        height: parent.height / 2
     }
 }

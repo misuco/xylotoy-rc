@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
     QQmlContext* ctx = engine.rootContext();
-    ctx->setContextProperty("layout", xylotoyrc);
+    ctx->setContextProperty("app", xylotoyrc);
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
     if (engine.rootObjects().isEmpty())
         return -1;

@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>lib/misulib/qml/elements/RootNoteSetter.qml</file>
+        <file>lib/misulib/qml/elements/ScaleSelect.qml</file>
     </qresource>
 </RCC>

@@ -20,7 +20,8 @@ SOURCES += main.cpp \
     lib/misulib/comm/mastersender.cpp \
     lib/misulib/models/freqtriple.cpp \
     lib/misulib/comm/libofqf/qosctypes.cpp \
-    lib/misulib/models/pitchcolor.cpp
+    lib/misulib/models/pitchcolor.cpp \
+    lib/misulib/widgets/core/scaleselect.cpp
 
 RESOURCES += qml.qrc
 
@@ -43,6 +44,7 @@ HEADERS += \
     lib/misulib/comm/libofqf/qoscclient.h \
     lib/misulib/models/freqtriple.h \
     lib/misulib/comm/libofqf/qosctypes.h \
-    lib/misulib/models/pitchcolor.h
+    lib/misulib/models/pitchcolor.h \
+    lib/misulib/widgets/core/scaleselect.h
 
 DISTFILES +=

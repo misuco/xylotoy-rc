@@ -35,7 +35,7 @@ XylotoyRc::XylotoyRc(QObject *parent) : QObject(parent),
     scale.append(true);
     scale.append(false);
     scale.append(true);
-    _scaleSelect.append(new ScaleSelect("major",scale,this));
+    _scaleSelect.append(new ScaleSelect("ionisch",scale,this));
 
     scale.clear();
     scale.append(false);
@@ -49,7 +49,63 @@ XylotoyRc::XylotoyRc(QObject *parent) : QObject(parent),
     scale.append(true);
     scale.append(false);
     scale.append(true);
-    _scaleSelect.append(new ScaleSelect("minor",scale,this));
+    _scaleSelect.append(new ScaleSelect("dorisch",scale,this));
+
+    scale.clear();
+    scale.append(true);
+    scale.append(false);
+    scale.append(true);
+    scale.append(false);
+    scale.append(true);
+    scale.append(false);
+    scale.append(true);
+    scale.append(false);
+    scale.append(true);
+    scale.append(false);
+    scale.append(true);
+    _scaleSelect.append(new ScaleSelect("phrygisch",scale,this));
+
+    scale.clear();
+    scale.append(false);
+    scale.append(true);
+    scale.append(false);
+    scale.append(true);
+    scale.append(false);
+    scale.append(true);
+    scale.append(false);
+    scale.append(true);
+    scale.append(false);
+    scale.append(true);
+    scale.append(true);
+    _scaleSelect.append(new ScaleSelect("mixolydisch",scale,this));
+
+    scale.clear();
+    scale.append(false);
+    scale.append(true);
+    scale.append(false);
+    scale.append(true);
+    scale.append(false);
+    scale.append(true);
+    scale.append(false);
+    scale.append(true);
+    scale.append(true);
+    scale.append(false);
+    scale.append(true);
+    _scaleSelect.append(new ScaleSelect("äolisch",scale,this));
+
+    scale.clear();
+    scale.append(false);
+    scale.append(true);
+    scale.append(false);
+    scale.append(true);
+    scale.append(false);
+    scale.append(true);
+    scale.append(true);
+    scale.append(false);
+    scale.append(true);
+    scale.append(false);
+    scale.append(true);
+    _scaleSelect.append(new ScaleSelect("lokrisch",scale,this));
 
     for(int i=0;i<_scaleSelect.size();i++) {
         connect(_scaleSelect.at(i),SIGNAL(setScale(QList<bool>)),_heartbeat,SLOT(onSetScale(QList<bool>)));

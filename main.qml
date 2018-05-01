@@ -9,7 +9,7 @@ Window {
     property int fontSize1: portrait ? height / 25 : width / 20
     property int fontSize3: portrait ? height / 48 : width / 48
 
-    property int buttonSize: width/12
+    property int buttonSize: portrait ? width/4 :  height/4
 
     property int buttonRadius: buttonSize/5
     property int borderWidth: 1+buttonSize/50
@@ -24,6 +24,7 @@ Window {
     width: 640
     height: 480
     title: qsTr("xylotoy remote control")
+    color: bgColor
 
     RootNoteSetter {
         id: rootNoteSetterRow
@@ -34,9 +35,8 @@ Window {
             right: parent.right
             top: parent.top
         }
-        height: parent.height / 2
+        height: buttonSize * 2
     }
-
 
     ScaleSelect {
         id: scaleSelect
